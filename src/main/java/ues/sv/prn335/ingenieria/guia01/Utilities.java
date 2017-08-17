@@ -5,10 +5,6 @@
  */
 package ues.sv.prn335.ingenieria.guia01;
 
-/**
- *
- * @author PC15
- */
 public class Utilities {
     
      public String getResume(String texto){
@@ -20,7 +16,13 @@ public class Utilities {
     }
      public String capitalizar(String texto){
          char[] cadena=texto.toCharArray();
+         cadena[0]=Character.toUpperCase(cadena[0]);
          
+         for (int i = 0; i < cadena.length; i++) {
+             if(cadena[i]==' '){
+             cadena[i]=Character.toUpperCase(cadena[i]);
+             }
+         }
          return texto;
      }
 }
