@@ -32,7 +32,6 @@ public class Utilities {
          for (int o = 0; o < 32; o++) {
             for (int i = 0; i < cadena.length; i++) {
                 if (cadena[i]==' ' && cadena[i+1]==' '){
-                    System.out.println(size);
                     for (int j = i; j < size-2; j++) {
                         cadena[j+1]=cadena[j+2];
                     }
