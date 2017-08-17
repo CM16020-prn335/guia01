@@ -29,16 +29,17 @@ public class Utilities {
          texto="";
          cadena[0]=Character.toUpperCase(cadena[0]);
          
-         for (int o = 0; o < 32; o++) {
+         for (int o = 0; o < cadena.length; o++) {
             for (int i = 0; i < cadena.length; i++) {
                 if (cadena[i]==' ' && cadena[i+1]==' '){
-                    for (int j = i; j < size-2; j++) {
+                    for (int j = i; j < size; j++) {
                         cadena[j+1]=cadena[j+2];
+                        }
+                     
                     }
-                 size--; 
+                    
                 }
-                 
-            }
+           
          }
          
          for (int i = 0; i < cadena.length; i++) {
