@@ -18,6 +18,11 @@ public class Utilities {
         }
         return resultado;
     }
+     /**
+      * El metodo recive una cadena de texto y capitaliza cada palabra de dicha cadena.
+      * @param texto
+      * @return String texto
+      */
      public String capitalizar(String texto){
          char[] cadena=texto.toCharArray();
          int size=cadena.length;
@@ -28,7 +33,7 @@ public class Utilities {
             for (int i = 0; i < cadena.length; i++) {
                 if (cadena[i]==' ' && cadena[i+1]==' '){
                     System.out.println(size);
-                    for (int j = i; j < size; j++) {
+                    for (int j = i; j < size-2; j++) {
                         cadena[j+1]=cadena[j+2];
                     }
                  size--; 
@@ -48,8 +53,22 @@ public class Utilities {
          
          return texto;
      }
-     
-    /* public int contarCoincidencias(String frase, String texto){
+     /**
+      * El metodo cuenta el numero de coincidencia de palabras entre la frase y el texto
+      * @param frase
+      * @param texto
+      * @return int coincidencias
+      */
+     public int contarCoincidencias(String frase, String texto){
+         int coincidencia=0, posicion=0;
          
-     }*/
+         posicion=texto.indexOf(frase);
+         while (posicion != -1) {
+            coincidencia++;
+            posicion=texto.indexOf(frase, posicion+1 );
+            
+             
+         }
+         return coincidencia;
+     }
 }
