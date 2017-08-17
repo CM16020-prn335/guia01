@@ -9,7 +9,7 @@ public class Utilities {
     /**
      * El metodo getResume recive una cadena de texto y devuelve los primeros 30 caracteres de esta.
      * @param texto
-     * @return resultado
+     * @return String resultado
      */
      public String getResume(String texto){
         String resultado="";
@@ -22,10 +22,16 @@ public class Utilities {
          char[] cadena=texto.toCharArray();
          texto="";
          cadena[0]=Character.toUpperCase(cadena[0]);
+         for (int i = 0; i < 10; i++) {
+             if (cadena[i]==' ' && cadena[i+1]==' '){
+                 
+                 
+             }
+         }
          
          for (int i = 0; i < cadena.length; i++) {
              if(cadena[i]==' '){
-             cadena[i]=Character.toUpperCase(cadena[i]);
+             cadena[i+1]=Character.toUpperCase(cadena[i+1]);
              }
          }
              for (int j = 0; j < cadena.length; j++) {
