@@ -10,7 +10,7 @@ public class NewMain {
 
     public static void main(String[] args) {
        Utilities nuevo = new Utilities();
-       System.out.println(nuevo.capitalizar("el    veloz    muricielago comia                kiwi"));
+       System.out.println(nuevo.capitalizar("el veloz muricielago comia kiwi"));
         System.out.println(nuevo.capitalizar("el    veloz    muricielago comia                kiwi"));
          System.out.println(nuevo.contarCoincidencias("hola ","juan pedro hola perehola"));
     }
