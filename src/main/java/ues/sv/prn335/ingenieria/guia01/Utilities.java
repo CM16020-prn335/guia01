@@ -20,15 +20,21 @@ public class Utilities {
     }
      public String capitalizar(String texto){
          char[] cadena=texto.toCharArray();
+         int size=cadena.length;
          texto="";
          cadena[0]=Character.toUpperCase(cadena[0]);
-         for (int i = 0; i < cadena.length; i++) {
-             if (cadena[i]==' ' && cadena[i+1]==' '){
-                 for (int j = i; j < cadena.length-2; j++) {
-                     cadena[j+1]=cadena[j+2];
-                 }
+         
+         for (int o = 0; o < 32; o++) {
+            for (int i = 0; i < cadena.length; i++) {
+                if (cadena[i]==' ' && cadena[i+1]==' '){
+                    System.out.println(size);
+                    for (int j = i; j < size; j++) {
+                        cadena[j+1]=cadena[j+2];
+                    }
+                 size--; 
+                }
                  
-             }
+            }
          }
          
          for (int i = 0; i < cadena.length; i++) {
@@ -42,4 +48,8 @@ public class Utilities {
          
          return texto;
      }
+     
+    /* public int contarCoincidencias(String frase, String texto){
+         
+     }*/
 }
