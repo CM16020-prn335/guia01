@@ -16,11 +16,15 @@ public class Utilities {
     }
      public String capitalizar(String texto){
          char[] cadena=texto.toCharArray();
+         texto="";
          cadena[0]=Character.toUpperCase(cadena[0]);
          
          for (int i = 0; i < cadena.length; i++) {
              if(cadena[i]==' '){
              cadena[i]=Character.toUpperCase(cadena[i]);
+             }
+             for (int j = 0; j < 10; j++) {
+                 texto+=cadena[j];
              }
          }
          return texto;
