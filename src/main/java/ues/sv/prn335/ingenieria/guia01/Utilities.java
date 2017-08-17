@@ -6,7 +6,11 @@
 package ues.sv.prn335.ingenieria.guia01;
 
 public class Utilities {
-    
+    /**
+     * El metodo getResume recive una cadena de texto y devuelve los primeros 30 caracteres de esta.
+     * @param texto
+     * @return resultado
+     */
      public String getResume(String texto){
         String resultado="";
         for (int i = 0; i < 30; i++) {
@@ -23,10 +27,11 @@ public class Utilities {
              if(cadena[i]==' '){
              cadena[i]=Character.toUpperCase(cadena[i]);
              }
-             for (int j = 0; j < 10; j++) {
+         }
+             for (int j = 0; j < cadena.length; j++) {
                  texto+=cadena[j];
              }
-         }
+         
          return texto;
      }
 }
