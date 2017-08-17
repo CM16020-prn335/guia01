@@ -22,9 +22,11 @@ public class Utilities {
          char[] cadena=texto.toCharArray();
          texto="";
          cadena[0]=Character.toUpperCase(cadena[0]);
-         for (int i = 0; i < 10; i++) {
+         for (int i = 0; i < cadena.length; i++) {
              if (cadena[i]==' ' && cadena[i+1]==' '){
-                 
+                 for (int j = i; j < cadena.length-2; j++) {
+                     cadena[j+1]=cadena[j+2];
+                 }
                  
              }
          }
